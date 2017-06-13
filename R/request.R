@@ -22,8 +22,15 @@ Authenticate <- function(app.id, app.key) {
                longitude,
                sep = "/")
 
-  query = list("start" = start,
-               "end" = end)
+  query = list()
+
+  if (!missing(start)) {
+    query$start = start
+  }
+
+  if (!missing(end)) {
+    query$end = end
+  }
 
   if (!missing(base)) {
     query$base = base
