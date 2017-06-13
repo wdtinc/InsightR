@@ -26,8 +26,8 @@ endpoints <- c(
 fnTemplate <- "%s <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('%s',
               latitude,
@@ -42,8 +42,8 @@ fnTemplate <- "%s <-
 climoTemplate <- "%s <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL,
            years = NULL) {
     .call.api('%s',
@@ -55,12 +55,11 @@ climoTemplate <- "%s <-
               years)
   }\n\n"
 
-
 ddTemplate <- "%s <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL,
            base = NULL) {
     .call.api('%s',
@@ -76,8 +75,8 @@ tests <- "
 test_that('integration', {
   lat <- 35
   lon <- -97
-  start <- '2016-01-01'
-  end <- '2016-01-31'
+  start <- '2017-01-01'
+  end <- '2017-01-10'
 "
 write(tests, file="tests/testthat/test_insightr.R")
 write("", file = "R/InsightR.R")
@@ -94,8 +93,7 @@ for (ep in endpoints) {
     climo = strsplit(fnName, '/')
     firstPart <- climo[[1]][1]
     secondPart <- climo[[1]][2]
-    fnName <-
-      paste0(firstPart, toupper(substr(secondPart, 1, 1)), substring(secondPart, 2))
+    fnName <- paste0(firstPart, toupper(substr(secondPart, 1, 1)), substring(secondPart, 2))
     fn <- sprintf(climoTemplate, fnName, ep)
 
   } else if (grepl("degree-days", ep)) {
@@ -105,7 +103,7 @@ for (ep in endpoints) {
   }
 
 
-  write (paste(" ", fnName, "(lat, lon, start, end)"), file="tests/testthat/test_insightr.R", append=TRUE)
+  write (paste(" ", fnName, "(lat, lon)"), file="tests/testthat/test_insightr.R", append=TRUE)
   write(fn, file = "R/InsightR.R", append = TRUE)
 }
 

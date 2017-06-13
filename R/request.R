@@ -1,9 +1,10 @@
+library(httr)
+library(jsonlite)
 
 Authenticate <- function(app.id, app.key) {
   Sys.setenv("SKYWISE_INSIGHT_APP_ID" = app.id)
   Sys.setenv("SKYWISE_INSIGHT_APP_KEY" = app.key)
 }
-
 
 .call.api <- function(endpoint,
                       latitude,
@@ -32,14 +33,17 @@ Authenticate <- function(app.id, app.key) {
     query$unit = unit
   }
 
-  req <- GET(
+  response <- GET(
     url = url,
     authenticate(app.id, app.key, type = "basic"),
     add_headers(Accept = "application/vnd.wdt+json; version=1"),
     query = query
   )
 
-  stop_for_status(req)
+  warn_for_status(response)
 
-  fromJSON(content(req, "text"))
+  content = fromJSON(content(response, "text", encoding = 'UTF-8'))
+
+  structure (list(content = content,
+                  response = response))
 }

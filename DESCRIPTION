@@ -1,15 +1,23 @@
 Package: InsightR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Insight API R Client
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Lee Robb
+Maintainer: Lee Robb <lrobb2@gmail.com>
+Description: An R client library for the SkyWise Insight API.
+    The SkyWise Insight API is an interface to WDT’s Weather as a Service analytics platform, 
+    allowing application developers to leverage high quality weather information for applications,
+    and products. The SkyWise Insight API provides access to historical, current, and forecast 
+    data for any region of interest, such as an agriculture field, urban area, or utility service 
+    area. API response formats can include time-series, summaries, or contours.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
     httr,
     jsonlite
-Suggests: testthat
+Suggests: testthat,
+    knitr,
+    rmarkdown
+RoxygenNote: 6.0.1
+VignetteBuilder: knitr

@@ -2,8 +2,8 @@
 GrowingDegreeDays <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL,
            base = NULL) {
     .call.api('growing-degree-days',
@@ -19,8 +19,8 @@ GrowingDegreeDays <-
 CoolingDegreeDays <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL,
            base = NULL) {
     .call.api('cooling-degree-days',
@@ -36,8 +36,8 @@ CoolingDegreeDays <-
 HeatingDegreeDays <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL,
            base = NULL) {
     .call.api('heating-degree-days',
@@ -53,8 +53,8 @@ HeatingDegreeDays <-
 DailyPrecipitation <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('daily-precipitation',
               latitude,
@@ -68,8 +68,8 @@ DailyPrecipitation <-
 HourlyPrecipitation <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-precipitation',
               latitude,
@@ -83,8 +83,8 @@ HourlyPrecipitation <-
 HourlyRelativeHumidity <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-relative-humidity',
               latitude,
@@ -98,8 +98,8 @@ HourlyRelativeHumidity <-
 DailySolarRadiation <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('daily-solar-radiation',
               latitude,
@@ -113,8 +113,8 @@ DailySolarRadiation <-
 HourlySolarRadiation <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-solar-radiation',
               latitude,
@@ -128,8 +128,8 @@ HourlySolarRadiation <-
 HourlyTemperature <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-temperature',
               latitude,
@@ -143,8 +143,8 @@ HourlyTemperature <-
 DailyHighTemperature <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('daily-high-temperature',
               latitude,
@@ -158,8 +158,8 @@ DailyHighTemperature <-
 DailyLowTemperature <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('daily-low-temperature',
               latitude,
@@ -173,8 +173,8 @@ DailyLowTemperature <-
 HourlyDewpoint <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-dewpoint',
               latitude,
@@ -188,8 +188,8 @@ HourlyDewpoint <-
 HourlyWindSpeed <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-wind-speed',
               latitude,
@@ -203,8 +203,8 @@ HourlyWindSpeed <-
 HourlyWindDirection <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-wind-direction',
               latitude,
@@ -218,8 +218,8 @@ HourlyWindDirection <-
 DailyEvapotranspirationShortCrop <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('daily-evapotranspiration-short-crop',
               latitude,
@@ -233,8 +233,8 @@ DailyEvapotranspirationShortCrop <-
 DailyEvapotranspirationTallCrop <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('daily-evapotranspiration-tall-crop',
               latitude,
@@ -248,8 +248,8 @@ DailyEvapotranspirationTallCrop <-
 HourlyEvapotranspirationShortCrop <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-evapotranspiration-short-crop',
               latitude,
@@ -263,8 +263,8 @@ HourlyEvapotranspirationShortCrop <-
 HourlyEvapotranspirationTallCrop <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL) {
     .call.api('hourly-evapotranspiration-tall-crop',
               latitude,
@@ -278,8 +278,8 @@ HourlyEvapotranspirationTallCrop <-
 ClimatologyDailyHighTemperature <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL,
            years = NULL) {
     .call.api('climatology/daily-high-temperature',
@@ -295,8 +295,8 @@ ClimatologyDailyHighTemperature <-
 ClimatologyDailyLowTemperature <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL,
            years = NULL) {
     .call.api('climatology/daily-low-temperature',
@@ -312,8 +312,8 @@ ClimatologyDailyLowTemperature <-
 ClimatologyDailyPrecipitation <-
   function(latitude,
            longitude,
-           start,
-           end,
+           start = NULL,
+           end = NULL,
            unit = NULL,
            years = NULL) {
     .call.api('climatology/daily-precipitation',
