@@ -1,11 +1,9 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-inst/doc
 # History files
 .Rhistory
 .Rapp.history
+
+.Rbuildignore
+InsightR.Rproj
 
 # Session Data files
 .RData
