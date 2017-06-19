@@ -19,7 +19,7 @@ endpoints <- c(
   'hourly-evapotranspiration-tall-crop',
   'climatology/daily-high-temperature',
   'climatology/daily-low-temperature',
-  'climatology/daily-precipitation'
+d  'climatology/daily-precipitation'
 )
 
 
