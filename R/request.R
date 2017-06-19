@@ -1,5 +1,3 @@
-library(httr)
-library(jsonlite)
 
 Authenticate <- function(app.id, app.key) {
   Sys.setenv("SKYWISE_INSIGHT_APP_ID" = app.id)
